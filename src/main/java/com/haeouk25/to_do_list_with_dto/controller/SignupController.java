@@ -40,7 +40,7 @@ public class SignupController {
                 .username(signupDTO.getUsername())
                 .password(signupDTO.getPassword())
                 .build();
-
+        userRepository.save(user);
         return "redirect:/login?registered"; // http://localhost:9-9-/login?registered=true
     }
 }
